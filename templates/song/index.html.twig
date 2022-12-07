@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}- Accueil{% endblock %}
+
+{% block h1 %}Mes kifs du moment{% endblock %}
+
+
+{% block main %}
+<div class="d-flex justify-content-end align-items-center">
+    <a href="{{ path('song.create') }}"  class="btn btn-primary">Nouveau son</a>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}- Nouveau son{% endblock %}
+
+{% block h1 %}Nouveau son{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            {{ form_start(form) }}
+                <div class="mb-3">
+                    <label>Titre</label>
+                    <div class="text-danger">{{ form_errors(form.title) }}</div>
+                    {{ form_widget(form.title, {'attr': {'class' : 'form-control' }}) }}
+                </div>
+                <div class="mb-3">
+                    <label>Le nom du ou des artistes</label>
+                    <div class="text-danger">{{ form_errors(form.artists) }}</div>
+                    {{ form_widget(form.artists, {'attr': {'class' : 'form-control' }}) }}
+                </div>
+                <div class="mb-3">
+                    <label>La note /5</label>
+                    <div class="text-danger">{{ form_errors(form.score) }}</div>
+                    {{ form_widget(form.score, {'attr': {'class' : 'form-control' }}) }}
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-dark" formnovalidate>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
